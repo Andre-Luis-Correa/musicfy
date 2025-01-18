@@ -1,0 +1,50 @@
+/* Estilos para telas pequenas */
+@media screen and (max-width:970px) {
+  header nav#left-nav ul#menu-icon {
+    display: flex;
+  }
+
+  header nav#left-nav ul#menu-icon li#menu-close {
+    display: none;
+  }
+
+  header nav#left-nav ul.main-menu {
+    flex-direction: column;
+    width: 80%;
+    height: 70vh;
+    background-color: black;
+    padding-top: 0.5rem;
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    z-index: 999;
+    display: none; /* Inicialmente escondido */
+  }
+
+  header nav#left-nav ul.main-menu li {
+    margin: 0.6rem;
+  }
+
+  header nav#left-nav ul.main-menu li a {
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width:971px) {
+  header nav#left-nav ul#menu-icon {
+    display: none;
+  }
+
+  header nav#left-nav ul.main-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+
+  header nav#left-nav ul.main-menu li a {
+    font-size: 100%;
+  }
+}
