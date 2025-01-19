@@ -1,3 +1,4 @@
+// Criando os álbuns usando uma Arrow Function
 const albums = Array.from({ length: 20 }, (_, i) => ({
     src: `../images/album${i + 1}.jpg`,
     title: `Álbum ${i + 1}`,
@@ -7,12 +8,12 @@ const albums = Array.from({ length: 20 }, (_, i) => ({
 // Exibindo o array gerado no console
 console.log(albums);
 
-// Função para gerar os slides do carrossel dinamicamente
+// Função para gerar os slides do carrossel de álbuns (Function Declaration)
 function generateCarousel() {
     const carouselContent = document.getElementById('carouselAlbumsContent');
     let slidesHTML = '';
 
-    // Dividir os álbuns em grupos de 4 (para exibição em tela grande)
+    // Dividir os álbuns em grupos de 5 (para exibição em tela grande)
     for (let i = 0; i < albums.length; i += 5) {
         let slideActiveClass = i === 0 ? 'active' : '';  // Define o primeiro slide como ativo
         slidesHTML += `<div class="carousel-item ${slideActiveClass}">
@@ -41,18 +42,21 @@ function generateCarousel() {
 // Chama a função para gerar o carrossel assim que a página carregar
 document.addEventListener('DOMContentLoaded', generateCarousel);
 
-const topSongs = Array.from({ length: 8 }, (_, i) => ({
-    src: `../images/song${i + 1}.jpg`,
-    title: `Música ${i + 1}`,
-    artist: `Artista ${i + 1}`
-}));
+// Criando o array de músicas usando uma Function Expression
+const topSongs = Array.from({ length: 8 }, function (_, i) {
+    return {
+        src: `../images/song${i + 1}.jpg`,
+        title: `Música ${i + 1}`,
+        artist: `Artista ${i + 1}`
+    };
+});
 
-// Função para gerar os slides do carrossel de músicas dinamicamente
-function generateSongsCarousel() {
+// Função para gerar os slides do carrossel de músicas dinamicamente (Arrow Function)
+const generateSongsCarousel = () => {
     const carouselSongsContent = document.getElementById('carouselSongsContent');
     let slidesHTML = '';
 
-    // Dividir as músicas em grupos de 5 (para exibição em tela grande)
+    // Dividir as músicas em grupos de 4 (para exibição em tela grande)
     for (let i = 0; i < topSongs.length; i += 4) {
         let slideActiveClass = i === 0 ? 'active' : '';  // Define o primeiro slide como ativo
         slidesHTML += `<div class="carousel-item ${slideActiveClass}">
@@ -76,8 +80,7 @@ function generateSongsCarousel() {
     }
 
     carouselSongsContent.innerHTML = slidesHTML;
-}
+};
 
 // Chama a função ao carregar a página
 document.addEventListener('DOMContentLoaded', generateSongsCarousel);
-

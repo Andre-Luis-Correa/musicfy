@@ -78,6 +78,7 @@
             <h2 class="text-start text-white display-4 ms-4">Ranking de Reproduções</h2>
 
             <div class="container">
+                <div class="table-responsive">
                 <table class="table table-dark table-hover text-center">
                     <thead>
                         <tr class="bg-primary text-white">
@@ -87,6 +88,7 @@
                             <th scope="col">Artista</th>
                             <th scope="col">Reproduções</th>
                             <th scope="col">Lançamento</th>
+                            <th scope="col">Tendência</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -97,6 +99,9 @@
                             <td>DJ Anne</td>
                             <td>1.2M</td>
                             <td>10 mai. 2024</td>
+                            <td class="text-success">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -105,6 +110,9 @@
                             <td>Lola Young</td>
                             <td>950K</td>
                             <td>1 jun. 2024</td>
+                            <td class="text-danger">
+                                <i class="bi bi-arrow-down-circle-fill"></i>
+                            </td>
                         </tr>
                         <tr>
                             <td>3</td>
@@ -113,6 +121,9 @@
                             <td>Bruno Mars</td>
                             <td>870K</td>
                             <td>15 jul. 2024</td>
+                            <td class="text-success">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </td>
                         </tr>
                         <tr>
                             <td>4</td>
@@ -121,9 +132,13 @@
                             <td>Bad Bunny</td>
                             <td>820K</td>
                             <td>22 ago. 2024</td>
+                            <td class="text-danger">
+                                <i class="bi bi-arrow-down-circle-fill"></i>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
             </div>
         </section>
     </main>
@@ -137,6 +152,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js"
         integrity="sha512-O5YCLUxCY2OBc4rfpnKUIgE4LGuCiW8CrJ7ty4hvkBAAKUOnlbomEFWd3a6ruRnFvO3LG2wiaGiJ1heOvdppvA=="
         crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
