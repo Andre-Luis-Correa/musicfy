@@ -1,0 +1,175 @@
+/* Alinha o título com a primeira imagem */
+.top-albums {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Espaçamento entre o título e o carrossel */
+    width: 100%;
+}
+
+.top-albums div#albumsCarousel {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #121212;
+    padding: 20px 0;
+}
+
+.top-albums h2 {
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.carousel-item .row {
+    width: 100%;
+    justify-content: center;
+    /* Centraliza os elementos horizontalmente */
+    margin: 0 auto;
+}
+
+/* Ajusta os cartões para distribuir uniformemente */
+.row-cols-md-6>.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cartões personalizados */
+.card {
+    background: #181818;
+    border: none;
+    width: 100%;
+    max-width: 180px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagens dos cartões */
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Texto do cartão */
+.card-title {
+    font-family: "Poppins", serif;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-family: "Poppins", serif;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+/* Personalizando os botões de navegação do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: white;
+}
+
+/* Ajuste ao passar o mouse */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    opacity: 1;
+    /* Totalmente visível ao passar o mouse */
+    transform: scale(1.1);
+    /* Efeito de crescimento ao passar o mouse */
+}
+
+/* Aumentando o tamanho dos ícones internos para melhor visibilidade */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%;
+}
+
+/* Ajustando posicionamento */
+.carousel-control-prev {
+    left: 2%;
+}
+
+.carousel-control-next {
+    right: 2%;
+}
+
+/* Estilização para a seção de Top Músicas */
+.top-songs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Espaçamento entre o título e o carrossel */
+    width: 100%;
+}
+
+.top-songs div#songsCarousel {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #121212;
+    padding: 20px 0;
+}
+
+/* Ajuste no título */
+.top-songs h2 {
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.top-songs .card {
+    background: #181818;
+    border: none;
+    width: 220px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.top-songs .card:hover {
+    transform: scale(1.05);
+}
+
+.top-songs .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.ranking-section {
+    background:
+        linear-gradient(to bottom,
+            rgb(35, 2, 51),
+            /* Azul escuro */
+            rgb(2, 24, 35),
+            /* Azul médio */
+            rgb(1, 27, 31)
+            /* Azul claro */
+        );
+    background-size: cover;
+    color: white;
+    /* Garante que o texto fique visível */
+    padding: 50px 0;
+}
+
+.ranking-section h2 {
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding-bottom: 30px;
+}
