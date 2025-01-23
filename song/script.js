@@ -84,3 +84,13 @@ const generateSongsCarousel = () => {
 
 // Chama a função ao carregar a página
 document.addEventListener('DOMContentLoaded', generateSongsCarousel);
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Inicializa o Sortable na tabela
+    const tableBody = document.querySelector('table tbody');
+    
+    new Sortable(tableBody, {
+        handle: 'td', // Defina onde o usuário pode pegar para arrastar (aqui estamos usando as células)
+        animation: 150, // Defina a animação de arrasto (opcional)
+    });
+});
