@@ -1,5 +1,13 @@
 header#common-navbar nav#navbar {
-  background: url('../../images/navbar.jpg') no-repeat center center;
+  background:
+        linear-gradient(to bottom,
+            rgb(35, 2, 51),
+            /* Azul escuro */
+            rgb(2, 24, 35),
+            /* Azul médio */
+            rgb(1, 27, 31)
+            /* Azul claro */
+        );
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
