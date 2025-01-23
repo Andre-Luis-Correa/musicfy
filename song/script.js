@@ -94,3 +94,32 @@ document.addEventListener('DOMContentLoaded', function () {
         animation: 150, // Defina a animação de arrasto (opcional)
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const videoElement = document.getElementById('featured-video');
+    const videoSection = document.querySelector('.video-section');
+
+    // Evento de início da reprodução
+    videoElement.addEventListener('play', function() {
+      // Mudando as cores do fundo enquanto o vídeo estiver sendo reproduzido
+      videoSection.classList.add('playing');  // Adiciona a classe 'playing' para o efeito
+      videoSection.style.setProperty('--myColor1', '#6B1980');  // Nova cor para o gradiente
+      videoSection.style.setProperty('--myColor2', '#27497C');  // Nova cor para o gradiente
+    });
+
+    // Evento quando o vídeo for pausado
+    videoElement.addEventListener('pause', function() {
+      // Retorna o gradiente original quando o vídeo for pausado
+      videoSection.classList.remove('playing');  // Remove a classe 'playing'
+      videoSection.style.setProperty('--myColor1', '#ff7e5f');  // Cor original
+      videoSection.style.setProperty('--myColor2', '#feb47b');  // Cor original
+    });
+
+    // Evento quando o vídeo terminar
+    videoElement.addEventListener('ended', function() {
+      // Retorna o gradiente original após o vídeo terminar
+      videoSection.classList.remove('playing');
+      videoSection.style.setProperty('--myColor1', '#ff7e5f');
+      videoSection.style.setProperty('--myColor2', '#feb47b');
+    });
+  });
