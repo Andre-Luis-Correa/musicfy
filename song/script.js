@@ -1,12 +1,17 @@
+// Objeto album
+const albumModel = {
+    src: '',
+    title: '',
+    desc: ''
+};
+
 // Criando os álbuns usando uma Arrow Function
 const albums = Array.from({ length: 20 }, (_, i) => ({
+    ...albumModel,  // Clonando a estrutura do objeto modelo
     src: `../images/album${i + 1}.jpg`,
     title: `Álbum ${i + 1}`,
     desc: `Descrição do álbum ${i + 1}`
 }));
-
-// Exibindo o array gerado no console
-console.log(albums);
 
 // Função para gerar os slides do carrossel de álbuns (Function Declaration)
 function generateCarousel() {
@@ -17,8 +22,8 @@ function generateCarousel() {
     for (let i = 0; i < albums.length; i += 5) {
         let slideActiveClass = i === 0 ? 'active' : '';  // Define o primeiro slide como ativo
         slidesHTML += `<div class="carousel-item ${slideActiveClass}">
-                <div class="container-fluid">
-                    <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-center">`;
+                            <div class="container-fluid">
+                                <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-center">`;
 
         for (let j = i; j < i + 5 && j < albums.length; j++) {
             slidesHTML += `
@@ -42,9 +47,17 @@ function generateCarousel() {
 // Chama a função para gerar o carrossel assim que a página carregar
 document.addEventListener('DOMContentLoaded', generateCarousel);
 
+// Objeto modelo de uma música
+const songModel = {
+    src: '',
+    title: '',
+    artist: ''
+};
+
 // Criando o array de músicas usando uma Function Expression
 const topSongs = Array.from({ length: 8 }, function (_, i) {
     return {
+        ...songModel,  // Clonando a estrutura do modelo
         src: `../images/song${i + 1}.jpg`,
         title: `Música ${i + 1}`,
         artist: `Artista ${i + 1}`
@@ -60,8 +73,8 @@ const generateSongsCarousel = () => {
     for (let i = 0; i < topSongs.length; i += 4) {
         let slideActiveClass = i === 0 ? 'active' : '';  // Define o primeiro slide como ativo
         slidesHTML += `<div class="carousel-item ${slideActiveClass}">
-                <div class="container-fluid">
-                    <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-center">`;
+                            <div class="container-fluid">
+                                <div class="row row-cols-1 row-cols-md-6 g-4 justify-content-center">`;
 
         for (let j = i; j < i + 4 && j < topSongs.length; j++) {
             slidesHTML += `
@@ -91,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     new Sortable(tableBody, {
         handle: 'td', // Defina onde o usuário pode pegar para arrastar (aqui estamos usando as células)
-        animation: 150, // Defina a animação de arrasto (opcional)
+        animation: 150, // Defina a animação de arrasto
     });
 });
 

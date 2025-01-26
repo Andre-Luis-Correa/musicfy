@@ -1,49 +1,60 @@
-/* Estilos para telas pequenas */
+/* Estilos para telas pequenas (máximo de 970px de largura) */
 @media screen and (max-width:970px) {
+  
+  /* Exibe o ícone do menu quando a tela é pequena */
   header nav#left-nav ul#menu-icon {
     display: flex;
   }
 
+  /* Esconde o botão de fechar o menu por padrão */
   header nav#left-nav ul#menu-icon li#menu-close {
     display: none;
   }
 
+  /* Estiliza o menu principal como um menu lateral para telas pequenas */
   header nav#left-nav ul.main-menu {
-    flex-direction: column;
-    width: 80%;
-    height: 70vh;
-    background-color: black;
-    padding-top: 0.5rem;
-    position: absolute;
-    top: 7rem;
-    right: 0;
-    z-index: 999;
-    display: none; /* Inicialmente escondido */
+    flex-direction: column;  /* Empilha os itens verticalmente */
+    width: 80%;              /* Define a largura do menu como 80% da tela */
+    height: 70vh;            /* Define a altura em 70% da altura da tela */
+    background-color: black; /* Define o fundo preto para o menu */
+    padding-top: 0.5rem;     /* Adiciona espaçamento interno na parte superior */
+    position: absolute;      /* Posiciona o menu de forma absoluta na página */
+    top: 7rem;               /* Posiciona o menu 7rem abaixo do topo */
+    right: 0;                /* Alinha o menu à direita da tela */
+    z-index: 999;            /* Garante que o menu fique sobre outros elementos */
+    display: none;           /* Inicialmente, o menu fica oculto */
   }
 
+  /* Adiciona espaçamento entre os itens do menu */
   header nav#left-nav ul.main-menu li {
     margin: 0.6rem;
   }
 
+  /* Aumenta o tamanho da fonte dos links do menu */
   header nav#left-nav ul.main-menu li a {
     font-size: 120%;
   }
 }
 
+/* Estilos para telas maiores (mínimo de 971px de largura) */
 @media screen and (min-width:971px) {
+  
+  /* Esconde o ícone do menu quando a tela for grande */
   header nav#left-nav ul#menu-icon {
     display: none;
   }
 
+  /* Estiliza o menu principal para ser exibido horizontalmente */
   header nav#left-nav ul.main-menu {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    height: auto;
-    background: none;
+    display: flex;           /* Exibe os itens lado a lado */
+    flex-direction: row;     /* Alinha os itens na horizontal */
+    position: static;        /* Mantém o menu na posição padrão da página */
+    width: auto;             /* Ajusta a largura automaticamente */
+    height: auto;            /* Ajusta a altura automaticamente */
+    background: none;        /* Remove qualquer cor de fundo */
   }
 
+  /* Define o tamanho padrão da fonte nos links do menu */
   header nav#left-nav ul.main-menu li a {
     font-size: 100%;
   }
