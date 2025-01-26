@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Músicas</title>
 
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- My Links -->
     <link rel="stylesheet" href="style.css">
@@ -28,9 +28,11 @@
     <main>
         <section class="top-albums">
             <div id="albumsCarousel" class="carousel slide" data-bs-ride="carousel">
-                <h2 class="text-start text-white display-3 display-md-2 display-sm-5 mt-4 ms-4">
-                    Top Álbuns
-                </h2>
+                <!-- text-start: alinha o texto a esquerda -->
+                <!-- mt-4: margim-top e 4 a instensidade -->
+                <!-- ms-4: margim-start é a margem a esquerda -->
+                <!-- display: adequam a fonte e/ou outros elementos de acordo com o tamanho da tela -->
+                <h2 class="text-start text-white display-3 display-md-2 display-sm-5 mt-4 ms-4">Top Álbuns</h2>
 
                 <div class="carousel-inner" id="carouselAlbumsContent">
                     <!-- Os slides serão inseridos dinamicamente aqui -->
@@ -52,9 +54,7 @@
 
         <section class="top-songs">
             <div id="songsCarousel" class="carousel slide" data-bs-ride="carousel">
-                <h2 class="text-start text-white display-3 display-md-2 display-sm-5 mt-4 ms-4">
-                    Top Músicas
-                </h2>
+                <h2 class="text-start text-white display-3 display-md-2 display-sm-5 mt-4 ms-4">Top Músicas</h2>
 
                 <div class="carousel-inner" id="carouselSongsContent">
                     <!-- Os slides serão inseridos dinamicamente aqui -->
@@ -92,7 +92,9 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- tr: table row - linha da tabela -->
                             <tr>
+                                <!-- td: table data - dados da tabela -->
                                 <td>1</td>
                                 <td><img src="../images/album1.jpg" alt="Álbum 1" class="img-thumbnail" width="60"></td>
                                 <td>Hot Hits Brasil</td>
@@ -143,9 +145,7 @@
         </section>
 
         <section class="video-section">
-            <h2 class="text-start text-white display-3 display-md-2 display-sm-5 mt-4 ms-4">
-                Vídeo em Destaque
-            </h2>
+            <h2 class="text-start text-white display-3 display-md-2 display-sm-5 mt-4 ms-4">Vídeo em Destaque</h2>
     
             <!-- Container para o vídeo -->
             <div class="video-container">
@@ -159,23 +159,21 @@
 
     <footer id="common-footer"></footer>
 
+    <!-- Bibliotecas do JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
-        integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js"
-        integrity="sha512-O5YCLUxCY2OBc4rfpnKUIgE4LGuCiW8CrJ7ty4hvkBAAKUOnlbomEFWd3a6ruRnFvO3LG2wiaGiJ1heOvdppvA=="
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js" integrity="sha512-O5YCLUxCY2OBc4rfpnKUIgE4LGuCiW8CrJ7ty4hvkBAAKUOnlbomEFWd3a6ruRnFvO3LG2wiaGiJ1heOvdppvA==" crossorigin="anonymous"></script>
 
+    <!-- Bibliotecas externa para ordenação da tabela -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+
+    <!-- Bootstrap JS -->
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+    <!-- My Links -->
     <script src="script.js"></script>
     <script src="../common/footer/script.js"></script>
     <script src="../common/navbar/script.js"></script>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 
 </html>
